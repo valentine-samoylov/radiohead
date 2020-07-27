@@ -44,10 +44,8 @@
 // Menu footer
 .menu-footer {
 	@include flexbox();
-	&__list {
+	&__col {
 		margin-right: 50px;
-		font-family: $sf-pro-display;
-		font-weight: 500;
 		&:last-child {
 			margin-right: 0;
 		}
@@ -56,6 +54,10 @@
 		margin-bottom: 32px;
 		@include font-size(32, normal, normal);
 		color: rgba(249, 248, 255, 0.5);
+	}
+	&__list {
+		font-family: $sf-pro-display;
+		font-weight: 500;
 	}
 	&__item {
 		margin-bottom: 24px;

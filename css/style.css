@@ -452,12 +452,10 @@ body {
 	display: flex;
 	font-size: 0;
 }
-.menu-footer__list {
+.menu-footer__col {
 	margin-right: 50px;
-	font-family: "SF Pro Display";
-	font-weight: 500;
 }
-.menu-footer__list:last-child {
+.menu-footer__col:last-child {
 	margin-right: 0;
 }
 .menu-footer__title {
@@ -466,6 +464,10 @@ body {
 	line-height: normal;
 	letter-spacing: normal;
 	color: rgba(249, 248, 255, 0.5);
+}
+.menu-footer__list {
+	font-family: "SF Pro Display";
+	font-weight: 500;
 }
 .menu-footer__item {
 	margin-bottom: 24px;
