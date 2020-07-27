@@ -7,18 +7,6 @@
 	z-index: 50;
 	width: 100%;
 	background-color: #293942;
-	// &.fixed {
-	// 	position: fixed;
-	// 	height: auto;
-	// 	background-color: #31344e;
-	// 	& .header__row {
-	// 		padding: 22px 0;
-	// 		border-bottom: none;
-	// 	}
-	// 	& .icon-menu {
-	// 		top: 25px;
-	// 	}
-	// }
 	&__row {
 		position: relative;
 		@include flexbox();
@@ -191,6 +179,7 @@
 	color: #7971e9;
 	text-align: center;
 	@include anim(0.3s, 0s);
+	overflow: hidden;
 	cursor: pointer;
 	&:hover {
 		background-color: #7971e9;

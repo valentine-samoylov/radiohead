@@ -117,13 +117,15 @@ body {
 
 // Intro
 .intro {
+	@include flexbox();
+	flex-direction: column;
+	justify-content: center;
 	flex: 1 0 100%;
 	width: 100%;
 	min-height: 650px;
 	background-repeat: no-repeat;
 	background-position: top center;
 	@include background-size(cover);
-	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	&__inner {
@@ -136,20 +138,30 @@ body {
 		display: inline-block;
 		width: 179px;
 		margin-bottom: 25px;
+		background-color: #7971e9;
+		color: #f4eeff;
+		&:hover {
+			background-color: #6058d0;
+		}
+	}
+	@media (max-width: $md6 + px) {
+		&__btn {
+			margin-bottom: 32px;
+		}
 	}
 }
 
 // Download
 .download {
 	&__btn {
-		display: inline-block;
 		position: relative;
+		display: inline-block;
+		width: 166px;
+		height: 49px;
 		margin-right: 19px;
 		border-radius: 5px;
 		background-color: #000000;
 		&--badge-1 {
-			width: 166px;
-			height: 49px;
 			&::before {
 				position: absolute;
 				top: 9px;
@@ -160,8 +172,6 @@ body {
 			}
 		}
 		&--badge-2 {
-			width: 166px;
-			height: 47px;
 			&::before {
 				position: absolute;
 				top: 6px;
@@ -178,7 +188,7 @@ body {
 	@media (max-width: $md6 + px) {
 		&__btn {
 			display: block;
-			margin: 0 0 13px 0;
+			margin: 0 0 16px 0;
 		}
 	}
 }
@@ -243,6 +253,14 @@ body {
 			font-size: 22px;
 		}
 	}
+	@media (max-width: $md6+px) {
+		& {
+			padding: 70px 0 70px 0;
+		}
+		&__title {
+			font-size: 38px;
+		}
+	}
 }
 
 // Brands
@@ -260,9 +278,12 @@ body {
 		text-align: center;
 	}
 	&__img {
-		// width: 100%;
+		max-width: 100%;
 	}
 	@media (max-width: $md3+px) {
+		& {
+			padding: 32px 0;
+		}
 		&__inner {
 			justify-content: center;
 			align-items: center;
@@ -464,7 +485,7 @@ body {
 	&__text {
 		margin: 0;
 	}
-	@media (max-width: $md4+px) {
+	@media (max-width: $md3+px) {
 		&__inner {
 			margin: 0 -30px -30px 0;
 		}

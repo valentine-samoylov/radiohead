@@ -393,6 +393,7 @@ body {
 	-webkit-transition: all 0.3s ease 0s;
 	-o-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
+	overflow: hidden;
 	cursor: pointer;
 }
 .btn:hover {
@@ -427,7 +428,7 @@ body {
 	font-weight: 400;
 	color: rgba(249, 248, 255, 0.25);
 }
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
 	.footer__inner {
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
@@ -552,6 +553,17 @@ body {
 }
 
 .intro {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 0;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	-webkit-box-flex: 1;
 	    -ms-flex: 1 0 100%;
 	        flex: 1 0 100%;
@@ -560,16 +572,8 @@ body {
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-size: cover;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+	flex-direction: column;
+	justify-content: center;
 }
 .intro__inner {
 	max-width: 610px;
@@ -581,18 +585,26 @@ body {
 	display: inline-block;
 	width: 179px;
 	margin-bottom: 25px;
+	background-color: #7971e9;
+	color: #f4eeff;
+}
+.intro__btn:hover {
+	background-color: #6058d0;
+}
+@media (max-width: 479.98px) {
+	.intro__btn {
+		margin-bottom: 32px;
+	}
 }
 
 .download__btn {
-	display: inline-block;
 	position: relative;
+	display: inline-block;
+	width: 166px;
+	height: 49px;
 	margin-right: 19px;
 	border-radius: 5px;
 	background-color: #000000;
-}
-.download__btn--badge-1 {
-	width: 166px;
-	height: 49px;
 }
 .download__btn--badge-1::before {
 	position: absolute;
@@ -601,10 +613,6 @@ body {
 	width: 122px;
 	height: 31px;
 	content: url(../images/ui/intro-btn-01.svg);
-}
-.download__btn--badge-2 {
-	width: 166px;
-	height: 47px;
 }
 .download__btn--badge-2::before {
 	position: absolute;
@@ -620,7 +628,7 @@ body {
 @media (max-width: 479.98px) {
 	.download__btn {
 		display: block;
-		margin: 0 0 13px 0;
+		margin: 0 0 16px 0;
 	}
 }
 
@@ -692,6 +700,14 @@ body {
 		font-size: 22px;
 	}
 }
+@media (max-width: 479.98px) {
+	.section {
+		padding: 70px 0 70px 0;
+	}
+	.section__title {
+		font-size: 38px;
+	}
+}
 
 .brands {
 	background-color: #293942;
@@ -715,7 +731,13 @@ body {
 .brands__item {
 	text-align: center;
 }
+.brands__img {
+	max-width: 100%;
+}
 @media (max-width: 991.98px) {
+	.brands {
+		padding: 32px 0;
+	}
 	.brands__inner {
 		-webkit-box-pack: center;
 		    -ms-flex-pack: center;
@@ -968,7 +990,7 @@ body {
 .reason__text {
 	margin: 0;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
 	.reason__inner {
 		margin: 0 -30px -30px 0;
 	}
